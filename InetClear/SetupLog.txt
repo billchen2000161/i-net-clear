@@ -1,0 +1,9 @@
+[SetupLogger,STATUS,2020/7/29 下午 05:16:58,0000] This file contains normal log up to the point when the setup is completed.
+[Config,STATUS,2020/7/29 下午 05:16:58,#00001] Initialized Persistence in folder C:\ProgramData\i-net software\reporting_User_Default
+[SetupWizard,INFO  ,2020/7/29 下午 05:16:59,#00001] [Restart] Cannot automatically restart because no EXITCODE was given: null
+[SetupWizard,INFO  ,2020/7/29 下午 05:16:59,#00001] Remote gui plugin loaded
+[Repository,ERROR ,2020/7/29 下午 05:17:00,RINDEX] IO error by reading "System Volume Information"
+[Repository,ERROR ,2020/7/29 下午 05:17:00,RINDEX] "System Volume Information" is not a directory
+[Webserver,FATAL ,2020/7/29 下午 05:17:00,#00001] Listener can not create a server socket on port 1500: Bind: Address already in use: bind
+[Repository,ERROR ,2020/7/29 下午 05:17:02,RINDEX] IO error by reading "System Volume Information"
+[Repository,ERROR ,2020/7/29 下午 05:17:02,RINDEX] "System Volume Information" is not a directory
