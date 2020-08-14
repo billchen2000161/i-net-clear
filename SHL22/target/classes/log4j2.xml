@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<properties>
+		<property name="FILE_NAME">mylog</property>
+		<property name="log.sql.level">info</property>
+		<property name="logDirs" value="logs"></property>
+		<property name="logLevels" value="INFO"></property>
+	</properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{YYYY-MM-DD} [%l] %-5level %c - %msg%n" />
+		</Console>
+
+		<RollingRandomAccessFile
+			name="RollingRandomAccessFile" fileName="${logDirs}/%d{YYYY-MM-DD}_STK.log"
+			filePattern="${logDirs}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd HH-mm}-%i.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%c] %-5level %l - %msg%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" />
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="20" />
+		</RollingRandomAccessFile>
+
+		<JDBC name="databaseAppender" tableName="Log">
+			<DriverManager
+				connectionString="jdbc:sqlserver://10.10.56.198;DatabaseName=STKHL"
+				driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+				username="sa" password="systex.6214" />
+			<Column name="message" pattern="%msg" />
+			<Column name="date" pattern="%d{yyyy-MM-dd HH:mm:ss.SSS}" />
+		</JDBC>
+
+	</Appenders>
+
+
+	<Loggers>
+
+		<logger name="com.systex.Record.Main" level="INFO"
+			additivity="true">
+			<appender-ref ref="databaseAppender" />
+		</logger>
+
+		<Root level="logLevels">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="RollingRandomAccessFile" />
+		</Root>
+	</Loggers>
+</Configuration>
