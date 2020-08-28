@@ -9,15 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class unity {
-	private final static int[] PSMIndex = { 11, 19, 10, 39, 39, 13, 13, 1, 7, 9, 8, 6, 1, 8, 20, 1, 1, 1, 3, 17, 10, 1,
-			1, 6, 2, 1, 1 };
+	private final static int[] PSMIndex = { 11, 19, 10, 39, 39, 13, 13, 8, 9, 8, 6, 1, 8, 20, 1, 1, 1, 3, 17, 10, 2,
+			1, 1, 6, 2, 1, 1 };
 	private final static int[] PSLIndex = { 11, 10, 40, 39, 6 };
 	private final static int[] PLAIndex = { 6, 11, 19, 10, 39, 11, 19, 10, 39, 13, 1, 11, 1, 1, 11, 1 };
 	private final static int[] PSRIndex = { 6, 10, 1, 13, 13, 13, 19, 1, 10, 20, 1 };
-	private final static int[] PIDIndex = { 11, 19, 10, 39, 39, 13, 13, 1, 7, 9, 8, 6, 1, 8, 20, 1, 1, 1, 3, 17, 10, 1,
+	private final static int[] PIDIndex = { 11, 19, 10, 39, 39, 13, 13, 8, 9, 8, 6, 1, 8, 20, 1, 1, 1, 3, 17, 10, 1,
 			1 };
-	private final static int[] PCOIndex = { 6, 1, 11, 19, 10, 39, 39, 13, 13, 1, 7, 9, 8, 8, 20, 1, 2, 3, 17 };
-	private final static int[] LMKIndex = { 6, 11, 19, 10, 39, 39, 13, 1, 7, 9, 8, 8, 20, 3, 17 };
+	private final static int[] PCOIndex = { 6, 1, 11, 19, 10, 39, 39, 13, 13, 8, 9, 8, 8, 20, 1, 2, 3, 17 };
+	private final static int[] LMKIndex = { 6, 11, 19, 10, 39, 39, 13, 8, 9, 8, 8, 20, 3, 17 };
 	private final static int[] RAEIndex = { 11, 19, 10, 39, 39, 9, 6 };
 	private final static int[] PELIndex = { 11, 10, 300, 6 };
 	private final static int[] DRFIndex = { 6, 11, 19, 10, 39, 11, 19, 10, 39, 13, 10, 19, 10, 21, 1 };
